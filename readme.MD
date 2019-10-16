@@ -31,4 +31,11 @@ https://www.youtube.com/watch?v=KcC8KZ_Ga2M
 https://www.youtube.com/watch?v=gWegskGYCtA
 
 
-### Project 04
+### Project 04 - To Do Again
+
+
+### Project 05 - Roll Dice Game
+
+Roll as many dices in 60 seconds
+
+https://filippolovotti.com/portfolio/dice-a-roni-game-app-case-study/#dar-ux
