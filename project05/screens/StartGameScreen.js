@@ -55,7 +55,7 @@ const StartGameScreen = props => {
 
                 <Card style={styles.inputContainer}>
                     <View style={styles.inputContainer}>
-                        <Text>Select number for Computer to guess</Text>
+                        <Text style={styles.title}>Select number for Computer to guess</Text>
                         <Input
                             style={styles.input}
                             blurOnSubmit
@@ -66,11 +66,11 @@ const StartGameScreen = props => {
                             value={enteredValue}
                         />
                         <View style={styles.buttonContainer}>
-                            <View style={styles.button}>
-                                <Button title="Reset" color={Colors.accent} onPress={resetInputHandler} />
+                            <View style={[{ width: "100%" }]}>
+                                <Button title="START" color={Colors.primary} onPress={startGameHandler} />
                             </View>
-                            <View style={styles.button}>
-                                <Button title="START" onPress={startGameHandler} />
+                            <View style={[{ width: "100%" }]}>
+                                <Button title="Reset" color={Colors.accent} onPress={resetInputHandler} />
                             </View>
                         </View>
                     </View>
@@ -91,6 +91,8 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         marginVertical: 10,
+        textAlign: 'center',
+        fontFamily: 'open-sans-bold'
     },
     inputContainer: {
         width: 500,
@@ -106,10 +108,12 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     button: {
-        width: 80
+        width: 80,
+        backgroundColor: Colors.primary,
     },
     input: {
-        width: 50,
+        width: '100%',
+        height: 50,
         textAlign: "center"
     }
 });
