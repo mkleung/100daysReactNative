@@ -19,11 +19,11 @@ https://www.youtube.com/watch?v=WnS7dcY5Hys&t=877s
 https://www.youtube.com/watch?v=KcC8KZ_Ga2M
 
 
-### Project 02 - To Do List
+### Project 02 - Roll The Dice Game
 
-[Demo](http://tiny.cc/u3j1dz)
+Roll as many dices in 60 seconds
 
-https://www.youtube.com/watch?v=KcC8KZ_Ga2M
+https://filippolovotti.com/portfolio/dice-a-roni-game-app-case-study/#dar-ux
 
 
 ### Project 03 - React Native Stopwatch
@@ -31,11 +31,37 @@ https://www.youtube.com/watch?v=KcC8KZ_Ga2M
 https://www.youtube.com/watch?v=gWegskGYCtA
 
 
-### Project 04 - To Do Again
+### Project 04 - To Do
+
+[Demo](http://tiny.cc/ep9oez)
 
 
-### Project 05 - Roll Dice Game
+### Project 05 - Guess Number Game
 
-Roll as many dices in 60 seconds
+[Demo](http://tiny.cc/cbbpez)
 
-https://filippolovotti.com/portfolio/dice-a-roni-game-app-case-study/#dar-ux
+
+### Project 06 - Youtube Search App
+
+https://www.youtube.com/watch?v=cnjsRwsJUUQ&list=PL06z42zB6YZ_G3sjHIuv6uj9bA76c9v7V
+
+
+### Project 07 - Chat App
+
+https://www.youtube.com/watch?v=omKU24SmBUM
+
+
+### Project 08 - Firebase Messaging App
+
+https://www.youtube.com/watch?v=Di607bTqhPc
+
+
+### Project 09 - Liquid Swipe
+
+https://www.youtube.com/watch?v=gLopy2MCAqM
+
+
+### Project 10 - Car Parking Finder
+
+https://www.youtube.com/watch?v=v93KvIWZ9Tw&t=5405s
+
