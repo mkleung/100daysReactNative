@@ -46,22 +46,33 @@ https://www.youtube.com/watch?v=gWegskGYCtA
 https://www.youtube.com/watch?v=cnjsRwsJUUQ&list=PL06z42zB6YZ_G3sjHIuv6uj9bA76c9v7V
 
 
-### Project 07 - Chat App
+### Project 07 - Recipe App
+
+
+
+### Project 08 - Chat App
 
 https://www.youtube.com/watch?v=omKU24SmBUM
 
 
-### Project 08 - Firebase Messaging App
+### Project 09 - Firebase Messaging App
 
 https://www.youtube.com/watch?v=Di607bTqhPc
 
 
-### Project 09 - Liquid Swipe
+### Project 10 - Liquid Swipe
 
 https://www.youtube.com/watch?v=gLopy2MCAqM
 
 
-### Project 10 - Car Parking Finder
+
+REDUX
+=====
+
+### Project 11 - Shop App
+
+
+### Project 12 - Car Parking Finder
 
 https://www.youtube.com/watch?v=v93KvIWZ9Tw&t=5405s
 
