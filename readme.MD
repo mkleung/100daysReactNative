@@ -28,6 +28,8 @@ https://filippolovotti.com/portfolio/dice-a-roni-game-app-case-study/#dar-ux
 
 ### Project 03 - React Native Stopwatch
 
+[Demo](https://snack.expo.io/@mpakleung/d49062)
+
 https://www.youtube.com/watch?v=gWegskGYCtA
 
 
