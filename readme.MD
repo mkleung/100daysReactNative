@@ -78,3 +78,13 @@ REDUX
 
 https://www.youtube.com/watch?v=v93KvIWZ9Tw&t=5405s
 
+
+
+NOTES
+=====
+
+React Navigation
+
+npm install --save react-navigation
+
+expo install react-native-gesture-handler react-native-reanimated
