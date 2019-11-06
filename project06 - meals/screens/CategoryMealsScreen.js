@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet, Button, Platform } from 'react-native';
 import { CATEGORIES } from '../data/dummy-data';
 
 const styles = StyleSheet.create({
@@ -41,9 +41,11 @@ CategoryMealsScreen.navigationOptions = (navigationData) => {
 	const selectedCategory = CATEGORIES.find(cat => cat.id === catId)
 
 	return {
-		headerTitle: selectedCategory.title
+		headerTitle: selectedCategory.title,
+
 	}
 
 }
+
 
 export default CategoryMealsScreen;

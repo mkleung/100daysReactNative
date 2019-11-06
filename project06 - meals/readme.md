@@ -25,3 +25,8 @@ import { createTabsNavigator } from 'react-navigation-tabs'
 npm install --save react-navigator-drawer
 
 import { createDrawerNavigator } from 'react-navigation-drawer'
+
+
+### React-native-screens
+
+npm install --save react-native-screens
