@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button, Platform } from 'react-native';
-import { CATEGORIES } from '../data/dummy-data';
+import { View, Text, FlatList, StyleSheet, Button, Platform } from 'react-native';
+import { CATEGORIES, MEALS } from '../data/dummy-data';
 
 const styles = StyleSheet.create({
 	screen: {
@@ -12,12 +12,21 @@ const styles = StyleSheet.create({
 
 const CategoryMealsScreen = (props) => {
 
+	const renderMealItem = itemData => {
+		return (<View><Text>{itemData.item.title}</Text></View>)
+	}
+
 	const catId = props.navigation.getParam('categoryId')
 	const selectedCategory = CATEGORIES.find(cat => cat.id === catId)
 
+	const displayedMeals = MEALS.filter(meal => meal.categoryIds.indexOf(catId) >= 0)
+
 	return (
 		<View style={styles.screen}>
-			<Text>CategoryMealsScreen</Text>
+
+			<FlatList data={displayedMeals} keyExtractor={(item, index) => item.id} renderItem={renderMealItem} />
+
+			{/* <Text>CategoryMealsScreen</Text>
 			<Text>{selectedCategory.title}</Text>
 			<Button
 				title='Go to meals'
@@ -30,7 +39,7 @@ const CategoryMealsScreen = (props) => {
 				onPress={() => {
 					props.navigation.goBack();
 				}}
-			/>
+			/> */}
 		</View>
 	);
 };
