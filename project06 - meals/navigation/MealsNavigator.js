@@ -15,7 +15,6 @@ const MealsNavigator = createStackNavigator({
     },
     CategoryMeals: {
         screen: CategoryMealsScreen,
-
     },
     MealDetail: MealDetailScreen
 }, {
@@ -23,7 +22,7 @@ const MealsNavigator = createStackNavigator({
         headerStyle: {
             backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : ''
         },
-        headerTintColor: Platform.OS === 'android' ? 'white' : 'white'
+        headerTintColor: Platform.OS === 'android' ? 'white' : 'red'
     }
 }
 )
