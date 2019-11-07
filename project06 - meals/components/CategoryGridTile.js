@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
     },
     title: {
         // fontFamily: 'open-sans-bold'
-        textAlign: 'right'
+        textAlign: 'right',
+        color: "#FFF"
     }
 
 })
