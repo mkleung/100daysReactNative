@@ -30,3 +30,18 @@ import { createDrawerNavigator } from 'react-navigation-drawer'
 ### React-native-screens
 
 npm install --save react-native-screens
+
+
+### Header buttons
+
+npm install --save react-navigation-header-buttons
+
+npm install --save @expo/vector-icons
+
+import { HeaderButton } from 'react-navigation-header-buttons'
+
+import { Ionicicons } from '@expo/vector-icons'
+
+
+// screen
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
