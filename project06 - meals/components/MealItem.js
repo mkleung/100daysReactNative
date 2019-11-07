@@ -1,18 +1,22 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground } from 'react-native';
 
 const MealItem = (props) => {
 	return (
 		<View style={styles.mealItem}>
 			<TouchableOpacity onPress={props.onSelectMeal}>
-				<View >
+				<View>
 					<View style={{ ...styles.mealRow, ...styles.mealHeader }}>
-						<Text>{props.title}</Text>
+						<ImageBackground source={{ uri: props.image }} style={styles.bgImage}>
+							<View style={styles.titleContainer}>
+								<Text style={styles.title}>{props.title}</Text>
+							</View>
+						</ImageBackground>
 					</View>
 					<View style={{ ...styles.mealRow, ...styles.mealDetail }}>
 						<Text>{props.duration}m</Text>
-                        <Text>{props.complexity.toUpperCase()}</Text>
-                        <Text>{props.affordability.toUpperCase()}</Text>
+						<Text>{props.complexity.toUpperCase()}</Text>
+						<Text>{props.affordability.toUpperCase()}</Text>
 					</View>
 				</View>
 			</TouchableOpacity>
@@ -21,22 +25,39 @@ const MealItem = (props) => {
 };
 
 const styles = StyleSheet.create({
-	mealRow    : {
+	mealRow        : {
 		flexDirection : 'row'
 	},
-	mealItem   : {
+	mealItem       : {
 		height          : 200,
 		width           : '100%',
-		backgroundColor : '#CCC'
+		backgroundColor : '#f5f5f5'
 	},
-	mealHeader : {
+	mealHeader     : {
 		height : '80%'
 	},
-	mealDetail : {
-        height : '20%',
-        paddingHorizontal: 10,
-        justifyContent: 'space-between'
-    }
+	mealDetail     : {
+		height            : '20%',
+		paddingHorizontal : 10,
+        justifyContent    : 'space-between',
+        alignItems: 'center'
+	},
+	bgImage        : {
+		width          : '100%',
+		height         : '100%',
+		justifyContent : 'flex-end'
+	},
+	titleContainer : {
+		backgroundColor   : 'rgba(0,0,0,0.5)',
+		paddingVertical   : 5,
+		paddingHorizontal : 12
+	},
+	title          : {
+		fontFamily : 'open-sans-bold',
+		fontSize   : 22,
+		color      : 'white',
+		textAlign  : 'center'
+	}
 });
 
 export default MealItem;
