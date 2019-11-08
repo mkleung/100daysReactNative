@@ -4,20 +4,14 @@ import { CATEGORIES } from '../data/dummy-data';
 import Colors from '../constants/Colors'
 import CategoryGridTile from '../components/CategoryGridTile'
 
-
 const styles = StyleSheet.create({
 	screen: {
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center'
 	},
-
 });
-
-
-
 const CategoriesScreen = (props) => {
-
 	const renderGridItem = (itemData) => {
 		return (
 			<CategoryGridTile
@@ -32,7 +26,6 @@ const CategoriesScreen = (props) => {
 				}} />
 		);
 	};
-
 	return (
 		<FlatList
 			keyExtractor={(item, index) => item.id}
@@ -46,7 +39,6 @@ const CategoriesScreen = (props) => {
 // HEADER
 CategoriesScreen.navigationOptions = {
 	headerTitle: 'Meal Categories',
-
 }
 
 export default CategoriesScreen;

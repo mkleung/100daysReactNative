@@ -9,12 +9,12 @@ const styles = StyleSheet.create({
     }
 })
 
-const FavourtiesScreen = props => {
+const FavouritesScreen = props => {
     return (
         <View style={styles.screen}>
-            <Text>FavourtiesScreen</Text>
+            <Text>FavouritesScreen</Text>
         </View>
     )
 }
 
-export default FavourtiesScreen
+export default FavouritesScreen

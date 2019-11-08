@@ -45,3 +45,19 @@ import { Ionicicons } from '@expo/vector-icons'
 
 // screen
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+
+
+### React Navigation Tabs
+
+npm install --save react-navigation-tabs
+
+```
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+ 
+export default createBottomTabNavigator({
+  Album: { screen: Album },
+  Library: { screen: Library },
+  History: { screen: History },
+  Cart: { screen: Cart },
+});
+```

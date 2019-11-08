@@ -25,38 +25,38 @@ const MealItem = (props) => {
 };
 
 const styles = StyleSheet.create({
-	mealRow        : {
-		flexDirection : 'row'
+	mealRow: {
+		flexDirection: 'row'
 	},
-	mealItem       : {
-		height          : 200,
-		width           : '100%',
-		backgroundColor : '#f5f5f5'
+	mealItem: {
+		height: 200,
+		width: '100%',
+		backgroundColor: '#f5f5f5'
 	},
-	mealHeader     : {
-		height : '80%'
+	mealHeader: {
+		height: '80%'
 	},
-	mealDetail     : {
-		height            : '20%',
-		paddingHorizontal : 10,
-        justifyContent    : 'space-between',
-        alignItems: 'center'
+	mealDetail: {
+		height: '20%',
+		paddingHorizontal: 10,
+		justifyContent: 'space-between',
+		alignItems: 'center'
 	},
-	bgImage        : {
-		width          : '100%',
-		height         : '100%',
-		justifyContent : 'flex-end'
+	bgImage: {
+		width: '100%',
+		height: '100%',
+		justifyContent: 'flex-end'
 	},
-	titleContainer : {
-		backgroundColor   : 'rgba(0,0,0,0.5)',
-		paddingVertical   : 5,
-		paddingHorizontal : 12
+	titleContainer: {
+		backgroundColor: 'rgba(0,0,0,0.5)',
+		paddingVertical: 5,
+		paddingHorizontal: 12
 	},
-	title          : {
-		fontFamily : 'open-sans-bold',
-		fontSize   : 22,
-		color      : 'white',
-		textAlign  : 'center'
+	title: {
+		fontFamily: 'open-sans-bold',
+		fontSize: 22,
+		color: 'white',
+		textAlign: 'center'
 	}
 });
 

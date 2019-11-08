@@ -4,10 +4,10 @@ import { CATEGORIES, MEALS } from '../data/dummy-data';
 import MealItem from '../components/MealItem';
 
 const styles = StyleSheet.create({
-	screen : {
-		flex           : 1,
-		justifyContent : 'center',
-		alignItems     : 'center'
+	screen: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center'
 	}
 });
 
@@ -21,9 +21,11 @@ const CategoryMealsScreen = (props) => {
 				complexity={itemData.item.complexity}
 				affordability={itemData.item.affordability}
 				onSelectMeal={() => {
-					props.navigation.navigate({routeName: 'MealDetail', params: {
-						mealId: itemData.item.id
-					}})
+					props.navigation.navigate({
+						routeName: 'MealDetail', params: {
+							mealId: itemData.item.id
+						}
+					})
 				}}
 			/>
 		);
@@ -66,7 +68,7 @@ CategoryMealsScreen.navigationOptions = (navigationData) => {
 	const selectedCategory = CATEGORIES.find((cat) => cat.id === catId);
 
 	return {
-		headerTitle : selectedCategory.title
+		headerTitle: selectedCategory.title
 	};
 };
 
