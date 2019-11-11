@@ -61,3 +61,16 @@ export default createBottomTabNavigator({
   Cart: { screen: Cart },
 });
 ```
+
+### React Navigation Material Bottom Tabs
+
+npm install --save react-navigation-material-bottom-tabs
+
+import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
+
+
+### React Native Paper
+
+
+npm install --save react-native-paper
+
