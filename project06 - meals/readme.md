@@ -71,6 +71,9 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 
 ### React Native Paper
 
-
 npm install --save react-native-paper
 
+
+### Side Drawer Navigation
+
+import { createDrawerNavigator } from 'react-navigation-drawer'
