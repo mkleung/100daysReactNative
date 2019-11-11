@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, Button, FlatList, TouchableOpacity } from 'reac
 import { CATEGORIES } from '../data/dummy-data';
 import Colors from '../constants/Colors'
 import CategoryGridTile from '../components/CategoryGridTile'
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import HeaderButton from '../components/HeaderButton'
 
 const styles = StyleSheet.create({
 	screen: {
@@ -11,6 +13,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 });
+
 const CategoriesScreen = (props) => {
 	const renderGridItem = (itemData) => {
 		return (
@@ -37,8 +40,17 @@ const CategoriesScreen = (props) => {
 };
 
 // HEADER
-CategoriesScreen.navigationOptions = {
-	headerTitle: 'Meal Categories',
+CategoriesScreen.navigationOptions = (navData) => {
+	return {
+		headerTitle: 'Meal Categories',
+		headerLeft: (<HeaderButtons HeaderButtonComponent={HeaderButton}>
+			<Item title="Menu" iconName="ios-menu" onPress={() => {
+				navData.navigation.toggleDrawer();
+			}}>
+			</Item>
+		</HeaderButtons>)
+	}
+
 }
 
 export default CategoriesScreen;
