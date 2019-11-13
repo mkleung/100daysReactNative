@@ -5,6 +5,18 @@ import { AppLoading } from 'expo';
 import { useScreens, enableScreens } from 'react-native-screens';
 import MealsNavigator from './navigation/MealsNavigator'
 
+import { createStore, combineReducers } from 'redux'
+import mealsReducer from './store/reducers/meals'
+import { Provider } from 'react-redux'
+
+const rootReducer = combineReducers({
+	meals: mealsReducer
+})
+
+const store = createStore(rootReducer);
+
+
+
 if (Platform.OS === "android") {
 	enableScreens()
 }
@@ -25,7 +37,10 @@ export default function App() {
 		return <AppLoading startAsync={fetchFonts} onFinish={() => setFontLoaded(true)} />;
 	}
 	return (
-		<MealsNavigator />
+		<Provider store={store}>
+			<MealsNavigator />
+		</Provider>
+
 	);
 }
 

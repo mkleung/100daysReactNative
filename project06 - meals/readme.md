@@ -77,3 +77,13 @@ npm install --save react-native-paper
 ### Side Drawer Navigation
 
 import { createDrawerNavigator } from 'react-navigation-drawer'
+
+
+
+Redux
+=====
+
+npm install --save redux react-redux
+
+
+
