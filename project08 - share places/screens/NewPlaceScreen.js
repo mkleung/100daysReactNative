@@ -11,4 +11,8 @@ const NewPlaceScreen = props => {
 
 const styles = StyleSheet.create({})
 
+NewPlaceScreen.navigationOptions = {
+    headerTitle: 'Add Place'
+}
+
 export default NewPlaceScreen
