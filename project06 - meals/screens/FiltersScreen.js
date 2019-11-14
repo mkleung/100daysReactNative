@@ -3,23 +3,24 @@ import { View, Text, StyleSheet, Switch, Platform } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../components/HeaderButton'
 import FilterSwitch from '../components/FilterSwitch'
-
+import { useDispatch } from 'react-redux'
+import { setFilters } from '../store/actions/meals'
 
 const FiltersScreen = props => {
     const { navigation } = props;
-    const [isGlutenFree, setIsGlutenFree] = useState(false)
-    const [isLactoseFree, setIsLactoseFree] = useState(false)
-    const [isVegan, setIsVegan] = useState(false)
     const [isVegetarian, setIsVegetarian] = useState(false)
+
+    const dispatch = useDispatch();
 
     const saveFilters = useCallback(() => {
         const appliedFilters = {
-            glutenFree: isGlutenFree,
-            lactoseFree: isLactoseFree,
-            vegan: isVegan,
+
             isVegetarian: isVegetarian
         }
-    }, [isGlutenFree, isLactoseFree, isVegan, isVegetarian])
+
+        dispatch(setFilters(appliedFilters))
+
+    }, [isVegetarian, dispatch])
 
     // Communicate between navigation and component
     useEffect(() => {
@@ -29,21 +30,7 @@ const FiltersScreen = props => {
     return (
         <View style={styles.screen}>
             <Text style={styles.title}>Filters</Text>
-            <FilterSwitch
-                label="Gluten Free"
-                state={isGlutenFree}
-                onChange={newValue => setIsGlutenFree(newValue)}
-            />
-            <FilterSwitch
-                label="Lactose Free"
-                state={isLactoseFree}
-                onChange={newValue => setIsLactoseFree(newValue)}
-            />
-            <FilterSwitch
-                label="Vegan"
-                state={isVegan}
-                onChange={newValue => setIsVegan(newValue)}
-            />
+
             <FilterSwitch
                 label="Vegetarian"
                 state={isVegetarian}
