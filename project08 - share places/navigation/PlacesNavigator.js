@@ -3,24 +3,24 @@ import { Platform } from 'react-native'
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 
-import PlacesListScreen from '../screebs/PlacesListScreen'
-import PlaceDetailScreen from '../screebs/PlaceDetailScreen'
-import newPlaceScreen from '../screebs/newPlaceScreen'
-import MapScreen from '../screebs/MapScreen'
+import PlacesListScreen from '../screens/PlacesListScreen'
+import PlaceDetailScreen from '../screens/PlaceDetailScreen'
+import NewPlaceScreen from '../screens/NewPlaceScreen'
+import MapScreen from '../screens/MapScreen'
 import Colors from '../constants/Colors'
 
 
 const PlacesNavigator = createStackNavigator({
     Places: PlacesListScreen,
     PlaceDetail: PlaceDetailScreen,
-    NewPlace: newPlaceScreen,
+    NewPlace: NewPlaceScreen,
     Map: MapScreen
 }, {
     defaultNavigationOptions: {
         headerStyle: {
-            backgroundcolor: Platform.OS === 'android' ? Colors.primary : ''
+            backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : ''
         },
-        headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primary
+        headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor
     }
 })
 
