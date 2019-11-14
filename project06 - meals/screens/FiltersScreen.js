@@ -2,14 +2,11 @@ import React, { useState, useEffect, useCallback } from 'react'
 import { View, Text, StyleSheet, Switch, Platform } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../components/HeaderButton'
-import Colors from '../constants/Colors'
 import FilterSwitch from '../components/FilterSwitch'
 
 
 const FiltersScreen = props => {
-
     const { navigation } = props;
-
     const [isGlutenFree, setIsGlutenFree] = useState(false)
     const [isLactoseFree, setIsLactoseFree] = useState(false)
     const [isVegan, setIsVegan] = useState(false)
@@ -79,8 +76,6 @@ FiltersScreen.navigationOptions = (navData) => {
             ),
     }
 }
-
-
 
 const styles = StyleSheet.create({
     screen: {

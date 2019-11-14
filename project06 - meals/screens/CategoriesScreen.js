@@ -6,14 +6,6 @@ import CategoryGridTile from '../components/CategoryGridTile'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../components/HeaderButton'
 
-const styles = StyleSheet.create({
-	screen: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center'
-	},
-});
-
 const CategoriesScreen = (props) => {
 	const renderGridItem = (itemData) => {
 		return (
@@ -52,5 +44,13 @@ CategoriesScreen.navigationOptions = (navData) => {
 	}
 
 }
+
+const styles = StyleSheet.create({
+	screen: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center'
+	},
+});
 
 export default CategoriesScreen;
