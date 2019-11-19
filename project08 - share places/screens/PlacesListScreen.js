@@ -16,7 +16,7 @@ const PlacesListScreen = props => {
             renderItem={(itemData, index) =>
                 <PlaceItem
                     key={index}
-                    image={null}
+                    image={itemData.item.imageUri}
                     title={itemData.item.title}
                     address={null}
                     onSelect={() => {

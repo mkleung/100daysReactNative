@@ -71,6 +71,8 @@ const CustomerHeaderButton = props => {
 export default CustomerHeaderButton;
 ```
 
+CAMERA
+=======
 
 ### Access Device Camera
 
@@ -78,6 +80,7 @@ expo install expo-image-picker
 
 expo install expo-permissions
 
+Components/ImagePicker.js
 
 ```
 import * as ImagePicker from 'expo-image-picker'
@@ -106,6 +109,7 @@ const component = () => {
             quality: 0.5,
         });
         setPickedImage(image.uri)
+        props.onImageTaken(image.uri)
     }
     return (
         <View>
@@ -118,4 +122,70 @@ const component = () => {
     )
 }
 
+```
+
+### Take New Place Screen 
+
+```
+
+const NewPlaceScreen = props => {
+
+    const [titleValue, setTitleValue] = useState('')
+    const [selectedImage, setSelectedImage] = useState();
+
+    const imageTakenHandler = imagePath => {
+        setSelectedImage(imagePath)
+    }
+
+    const titleChangeHandler = text => {
+        setTitleValue(text)
+    }
+
+    const dispatch = useDispatch();
+
+    const savePlaceHandler = () => {
+        console.log(titleValue)
+        dispatch(placesActions.addPlace(titleValue, selectedImage));
+        props.navigation.goBack();
+    }
+
+    return (
+        <ScrollView>
+            <View style={styles.form}>
+                <Text style={styles.label}>Title</Text>
+                <TextInput
+                    style={styles.textInput}
+                    onChangeText={titleChangeHandler}
+                    value={titleValue} />
+                <ImagePicker onImageTaken={imageTakenHandler} />
+                <Button title="Save Place" color={Colors.primary} onPress={savePlaceHandler} />
+            </View>
+        </ScrollView>
+    )
+}
+```
+
+
+### List images Screen
+
+
+```
+const PlacesListScreen = props => {
+    const places = useSelector(state => state.places.places)
+    return (
+        <FlatList
+            data={places}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={(itemData, index) =>
+                <PlaceItem
+                    key={index}
+                    image={itemData.item.imageUri}
+                    title={itemData.item.title}
+                    address={null}
+                    onSelect={() => {
+                        props.navigation.navigate("PlaceDetail",
+                            { placeTitle: itemData.item.title, placeId: itemData.item.id })
+                    }} />} />
+    )
+}
 ```
