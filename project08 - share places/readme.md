@@ -84,7 +84,7 @@ import * as ImagePicker from 'expo-image-picker'
 import * as Permissions from 'expo-permissions
 
 const component = () => {
-
+    const [pickedImage, setPickedImage] = useState()
     const verifyPermission = async () => {
         const result = await Permissions.askAsync(Permissions.CAMERA, Permissions.CAMERA_ROLL)
         if (result.status !== 'granted') {
@@ -100,10 +100,16 @@ const component = () => {
     const takeImageHandler = async () => {
         const hasPermission = await verifyPermission();
         if (!hasPermission) { return }
-        ImagePicker.launchCameraAsync();
+        const image = await ImagePicker.launchCameraAsync({
+            allowEditing: true,
+            aspect: [16, 9],
+            quality: 0.5,
+        });
+        setPickedImage(image.uri)
     }
     return (
         <View>
+            {!pickedImage ? (<Text>No Image picked</Text>) : (<Image style=    {styles.image} source={{ uri: pickedImage }} />)}
             <Button
                 title="Take Image"
                 color={Colors.primary}
