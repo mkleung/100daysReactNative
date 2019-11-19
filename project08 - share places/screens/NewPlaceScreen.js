@@ -3,6 +3,7 @@ import { ScrollView, View, Text, Button, TextInput, StyleSheet } from 'react-nat
 import Colors from '../constants/Colors'
 import { useDispatch } from 'react-redux'
 import * as placesActions from "../store/places-actions"
+import ImagePicker from '../components/ImagePicker'
 
 const NewPlaceScreen = props => {
 
@@ -28,6 +29,7 @@ const NewPlaceScreen = props => {
                     style={styles.textInput}
                     onChangeText={titleChangeHandler}
                     value={titleValue} />
+                <ImagePicker />
                 <Button title="Save Place" color={Colors.primary} onPress={savePlaceHandler} />
             </View>
         </ScrollView>

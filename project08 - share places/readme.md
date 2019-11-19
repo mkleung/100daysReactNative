@@ -72,3 +72,44 @@ export default CustomerHeaderButton;
 ```
 
 
+### Access Device Camera
+
+expo install expo-image-picker
+
+expo install expo-permissions
+
+
+```
+import * as ImagePicker from 'expo-image-picker'
+import * as Permissions from 'expo-permissions
+
+const component = () => {
+
+    const verifyPermission = async () => {
+        const result = await Permissions.askAsync(Permissions.CAMERA, Permissions.CAMERA_ROLL)
+        if (result.status !== 'granted') {
+            Alert.alert(
+                "Insufficient Permissions!",
+                "You need to grant camera permissions to use this app",
+                [{ text: "OK" }]
+            )
+            return false
+        }
+        return true;
+    }
+    const takeImageHandler = async () => {
+        const hasPermission = await verifyPermission();
+        if (!hasPermission) { return }
+        ImagePicker.launchCameraAsync();
+    }
+    return (
+        <View>
+            <Button
+                title="Take Image"
+                color={Colors.primary}
+                onPress={takeImageHandler} />
+        </View>
+    )
+}
+
+```
