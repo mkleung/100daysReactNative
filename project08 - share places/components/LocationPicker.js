@@ -18,11 +18,15 @@ const LocationPicker = props => {
     const [pickedLocation, setPickedLocation] = useState();
 
     const mapPickedLocation = props.navigation.getParam('pickedLocation')
-    console.log(mapPickedLocation)
+    const { onLocationPicked } = props;
 
     useEffect(() => {
         if (mapPickedLocation) {
             setPickedLocation(mapPickedLocation)
+            onLocationPicked({
+                lat: location.coords.latitude,
+                lng: location.coords.longitude
+            })
         }
     }, [mapPickedLocation])
 
@@ -54,6 +58,10 @@ const LocationPicker = props => {
                 lat: location.coords.latitude,
                 lng: location.coords.longitude
             });
+            props.onLocationPicked({
+                lat: location.coords.latitude,
+                lng: location.coords.longitude
+            })
         } catch (err) {
             Alert.alert(
                 'Could not fetch location!',
