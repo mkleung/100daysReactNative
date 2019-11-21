@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Platform } from 'react-native
 import MapView, { Marker } from 'react-native-maps';
 import Colors from '../constants/Colors';
 const MapScreen = props => {
-    const [selectedLocation, setSelectedLocation] = useState();
+    const [selectedLocation, setSelectedLocation] = useState(null);
 
     const mapRegion = {
         latitude: 45.4215,
@@ -19,6 +19,9 @@ const MapScreen = props => {
         });
     };
 
+
+
+
     let markerCoordinates;
 
     if (selectedLocation) {
@@ -29,9 +32,8 @@ const MapScreen = props => {
     }
 
     const savePickedLocationHandler = useCallback(() => {
-        console.log("save picked")
-        // if (!selectedLocation) {
 
+        // if (!selectedLocation) {
         //     return;
         // }
         props.navigation.navigate('NewPlace', { pickedLocation: selectedLocation });
@@ -40,6 +42,8 @@ const MapScreen = props => {
     useEffect(() => {
         props.navigation.setParams({ saveLocation: savePickedLocationHandler })
     }, [savePickedLocationHandler])
+
+
 
     return (
         <MapView
